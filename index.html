@@ -101,13 +101,58 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
         position: relative;
 }
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Transparent background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Know More About Me</h1>
+    <h1>Raijan's Portfolio</h1>
 </header>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>View this website in desktop to have the best experience.</p>
+  </div>
+</div>
 
 <div class="container">
     <div class="portfolio-item">
@@ -138,15 +183,28 @@
 </footer>
 
 <script>
-    window.addEventListener('scroll', function() {
-        var footer = document.getElementById('footer');
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            footer.style.bottom = '100';
-        } else {
-            footer.style.bottom = '-100px';
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    window.onload = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-    });
+    };
 </script>
 
-</body>
-</html>>
+</
