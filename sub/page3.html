@@ -154,6 +154,21 @@
         .button.gray:hover {
             background-color: #505050;
         }
+
+	.button.green {
+            background-color: #25D366;
+        }
+
+        .button.green::after {
+            content: ' ';
+            background: #00db00;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+	.button.green:hover {
+            background-color: #00b300;
+        }
 	
 	.but {
 	    background-color: #333;
@@ -196,6 +211,10 @@
                 <a href="https://discord.com/users/1104244559795470420" class="button purple">
                     <i class="fab fa-discord"></i>
                     <span>Discord</span>
+                </a>
+		<a href="https://discord.com/users/1104244559795470420" class="button green">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
                 </a>
 		<button class="but" onclick="window.location.href = '../index.html';">Back to Portfolio</button>
 
