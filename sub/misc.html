@@ -104,11 +104,21 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
 	}
-	.but:hover {
-           background-color: #444;
-	   transform: scale(1.05);
-	}
-    
+	.button-d {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: not-allowed;
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+        .button-d:hover {
+            background-color: #0056b3;
+        }
 </style>
 <body>
 <header>
@@ -120,11 +130,17 @@
     <div class="portfolio-item">
         <h2>Donate </h2>
         <p>Donate via Gcash or Maya</p>
-        <button class="button" onclick="window.location.href = 'path here';">View</button>
+        <button class="button-d" onclick="window.location.href = 'misc/donation.html';">View</button>
     </div>
 
+    <div class="portfolio-item">
+        <h2>NGL</h2>
+        <p>Send me an annonymous message in NGL!</p>
+        <button class="button-d" onclick="window.location.href  'ngl/ngl.html';">View</button>
+    </div>
 <div>
 <button class='but' onclick="window.location.href ='../index.html';">Back to Portfolio</button>
 </div>
+
 </body>
 </html>
