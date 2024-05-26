@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raijan's Portfolio - Misc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <style>
 	body {
@@ -59,6 +61,8 @@
             margin: 20px auto;
             padding: 0 20px;
             padding-bottom: 60px;
+	    align-items: center;
+	    justify-content: center;
         }
         .portfolio-item {
 	    width: 400px;
@@ -69,10 +73,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: background-color 0.3s ease, transform 0.3s ease;
             position: relative;
-        }
-        .portfolio-item:hover {
-            background-color: #e0e0e0;
-            transform: scale(1.05);
         }
         .portfolio-link {
             color: #007bff;
@@ -104,49 +104,57 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
 	}
-	.button-d {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: not-allowed;
+	.but:hover {
+           background-color: #444;
+	   transform: scale(1.05);
+	}
+	.profile-picture {
+            flex-shrink: 0;
+	    margin: 20px, 0;
+        }
+        .profile-picture img {
+	    transform: scale(1.05);
+            border-radius: 24px;
             width: 100%;
-            display: block;
-            margin-top: 20px;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+	    margin-left: 55px;
         }
-        .button-d:hover {
-            background-color: #0056b3;
-        }
+	p {
+	    font-family: 'poppins', Arial, sans-serif;
+	    text-align: center;
+	    font-size: auto;
+	}
 	h3 {
-            font-size: 34px;
-            font-family: 'lilitaone', Arial, sans-serif;
-            margin-top: auto;
-	    margin-left: 550px;
-        }
+            font-family: 'poppins', Arial, sans-serif;
+	    text-align: center;
+	    font-size: 20px;
+	    margin-top: 0px;
+	}
+    
 </style>
 <body>
 <header>
     <h1>Raijan's Portfolio</h1>
 </header>
-    <h3>MISC</h3>
+    <h1>Donate via Maya!</h1>
 
 <div class="container">
     <div class="portfolio-item">
-        <h2>Donate </h2>
-        <p>Donate via Gcash or Maya</p>
-        <button class="button" onclick="window.location.href = 'misc/donation.html';">View</button>
+        <h2>Scan the QR code below</h2>
+	<div class="profile-picture">
+        <img src="../../assets/maya.jpg" alt="Maya QR">
+    	</div>
+    <div>
+	<h3>Raijan Palmitos</h3>
+	<p>63+ 096* *** 8617</p>
+	<i class="fab fa-M"></i>
+    </div>
     </div>
 
-    <div class="portfolio-item">
-        <h2>NGL</h2>
-        <p>Send me an annonymous message in NGL!</p>
-        <button class="button-d" onclick="window.location.href  'ngl/ngl.html';">View</button>
-    </div>
 <div>
-<button class='but' onclick="window.location.href ='../index.html';">Back to Portfolio</button>
+<button class='but' onclick="window.location.href ='donation.html';">Back to Portfolio</button>
 </div>
-
 </body>
 </html>
