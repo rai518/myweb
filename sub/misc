@@ -41,6 +41,7 @@
             font-size: 36px;
             color: #333;
 	    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	    text-align: center;
         }
         h2 {
             font-family: 'poppins', Arial, sans-serif;
@@ -60,6 +61,7 @@
             padding-bottom: 60px;
         }
         .portfolio-item {
+	    width: 400px;
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
@@ -92,8 +94,8 @@
         .button:hover {
             background-color: #0056b3;
         }
-        .button2 {
-            background-color: #333;
+        .but {
+	    background-color: #333;
             color: #c7c7c7;
             border: none;
             padding: 10px 20px;
@@ -101,23 +103,11 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0056b3;
-	    transform: scale(1.05);
-        }
-        .portfolio-itemp2 {
-        background-image: url('assets/uc.jpg');
-        background-size: cover;
-        background-color: #f0f0f0;
-        color: #333;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 25px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        position: relative;
-}
+	}
+	.but:hover {
+           background-color: #444;
+	   transform: scale(1.05);
+	}
     
 </style>
 <body>
@@ -125,8 +115,16 @@
     <h1>Raijan's Portfolio</h1>
 </header>
     <h1>STAY TUNED!</h1>
+
+<div class="container">
+    <div class="portfolio-item">
+        <h2>Donate </h2>
+        <p>Donate via Gcash or Maya</p>
+        <button class="button" onclick="window.location.href = 'path here';">View</button>
+    </div>
+
 <div>
-<button class='button2' onclick="window.location.href ='../index.html';">Back to Portfolio</button>
+<button class='but' onclick="window.location.href ='../index.html';">Back to Portfolio</button>
 </div>
 </body>
 </html>
