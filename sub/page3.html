@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijan's Portfolio - Social Media</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c7b98e;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-card {
+            background-color: #262626;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-picture {
+            flex-shrink: 0;
+        }
+
+        .profile-picture img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .profile-details h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            margin: 5px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .description {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .button {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .button span {
+            margin-left: 10px;
+        }
+
+        .button i {
+            margin-right: 10px;
+        }
+
+        .button.blue {
+            background-color: #3498db;
+        }
+
+        .button.blue::after {
+            content: ' ';
+            background: #0077b5;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button.purple {
+            background-color: #9b59b6;
+        }
+
+        .button.purple::after {
+            content: ' ';
+            background: #23292f;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button.red {
+            background-color: #e74c3c;
+        }
+
+        .button.red::after {
+            content: ' ';
+            background: #ff0000;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button.gray {
+            background-color: #707070;
+        }
+
+        .button.gray::after {
+            content: ' ';
+            background: #404040;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .button.blue:hover {
+            background-color: #2980b9;
+        }
+
+        .button.purple:hover {
+            background-color: #8e44ad;
+        }
+
+        .button.red:hover {
+            background-color: #c0392b;
+        }
+
+        .button.gray:hover {
+            background-color: #505050;
+        }
+	
+	.but {
+	    background-color: #333;
+            color: #c7c7c7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+	}
+	.but:hover {
+           background-color: #444;
+	   transform: scale(1.05);
+	}
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-picture">
+            <img src="../assets/pfp.jpg" alt="Raijan's Profile Picture">
+        </div>
+        <div class="profile-details">
+            <h2>Raijan D. Palmitos</h2>
+            <p class="subtitle">My Social Accounts</p>
+            <p class="description">Some of my social accounts are not added yet. They will be added on the future updates.</p>
+            <div class="buttons">
+                <a href="https://www.facebook.com/raijan.palmitos.1/" class="button blue">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/jann_p18?igsh=YmVpZ3N6azJ5Mm4y" class="button red">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@raiji.18?_t=8mdoqovpOWl&_r=1" class="button gray">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Tiktok</span>
+                </a>
+                <a href="https://discord.com/users/1104244559795470420" class="button purple">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+		<button class="but" onclick="window.location.href = '../index.html';">Back to Portfolio</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
