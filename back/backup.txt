@@ -1,0 +1,892 @@
+-------------------------INDEX.HTML--------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijan's Portfolio- Portfolio</title>
+    <style>
+      body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-color: #c7b98e;
+        }
+        @font-face {
+            font-family: 'lilitaone';
+            src: url('../assets/lilitaone.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'poppins';
+            src: url('../assets/poppins.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        header {
+            font-family: 'poppins', Arial, sans-serif;
+            background-color: #ecaf62;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+	    font-family: 'poppins', Arial, sans-serif;
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+	    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'poppins', Arial, sans-serif;
+        }
+        footer {
+   	    background-color: #333;
+    	    color: #fff;
+    	    text-align: center;
+   	    padding: 20px;
+   	    width: 100%;
+    	    margin-top: auto;
+	}
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            padding-bottom: 60px;
+        }
+        .portfolio-item {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+        .portfolio-item:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+        .portfolio-link {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .portfolio-itemp2 {
+        background-image: url('assets/uc.jpg');
+        background-size: cover;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        position: relative;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Transparent background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Raijan's Portfolio</h1>
+</header>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>View this website in desktop to have the best experience.</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="portfolio-item">
+        <h2>Basic Information</h2>
+        <p>In this page you can find my basic information</p>
+        <button class="button" onclick="window.location.href = 'sub/mybasic.html';">View</button>
+    </div>
+    <div class="portfolio-item">
+        <h2>About Me</h2>
+        <p>In this page you can know more about me.</p>
+        <button class="button" onclick="window.location.href = 'sub/page2.html';">View</button>
+    </div>
+    <div class="portfolio-item">
+        <h2>My Socials</h2>
+        <p>In this page you can check my social media accounts.</p>
+        <button class="button" onclick="window.location.href = 'sub/page3.html';">View</button>
+    </div>
+    <div class="portfolio-item">
+        <h2>My Interests</h2>
+        <p>In this page you can check my interest and add me
+         as a friend in a game.</p>
+        <button class="button" onclick="window.location.href = 'sub/page4.html';">View</button>
+    </div>
+    <div class="portfolio-item">
+        <h2>Misc</h2>
+        <p>In this page you can donate me, Add an anonymous message on my NGL account(seasonal) and others.</p>
+        <button class="button" onclick="window.location.href = 'sub/misc.html';">View</button>
+    </div>
+</div>
+
+<footer id="footer">
+    <p>&copy; 2024 RDP - All Rights Reserved</p>
+</footer>
+
+<script>
+    // Function to set a cookie
+    function setCookie(cookieName, cookieValue, expirationDays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+    }
+
+    // Function to get a cookie value
+    function getCookie(cookieName) {
+        var name = cookieName + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieArray = decodedCookie.split(';');
+        for (var i = 0; i < cookieArray.length; i++) {
+            var cookie = cookieArray[i];
+            while (cookie.charAt(0) == ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(name) == 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+        return "";
+    }
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Function to show the modal if it has not been shown before
+    function showModalOnce() {
+        var modalShown = getCookie("modalShown");
+        if (modalShown !== "true") {
+            modal.style.display = "block";
+            setCookie("modalShown", "true", 30); // Set cookie to expire after 30 days
+        }
+    }
+
+    // When the user clicks on the button, open the modal
+    window.onload = showModalOnce;
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+
+</body>
+</html>
+
+-----------------------MY BASIC HTML-------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijan's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c7b98e;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: 'lilitaone';
+            src: url('../assets/lilitaone.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'poppins';
+            src: url('../assets/poppins.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        header {
+            font-family: 'poppins', Arial, sans-serif;
+            background-color: #ecaf62;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: bottom 0.3s ease;
+        }
+        .container {
+            font-family: 'poppins', Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;                        
+            padding: 0 20px;
+        }
+        h2  {
+            font-size: 34px;
+            font-family: 'lilitaone', Arial, sans-serif;
+        }
+        .info-item {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #333;
+            color: #c7c7c7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Raijan's Portfolio</h1>
+</header>
+
+<div class="container">
+    <h2>My Basic Information</h2>
+    <div class="info-item">
+        <strong>Name:</strong> Raijan D. Palmitos
+    </div>
+    <div class="info-item">
+        <strong>Age:</strong> 15 Years Old
+    </div>
+    <div class="info-item">
+        <strong>Date of Birth:</strong> May 18, 2009
+    </div>
+    <div class="info-item">
+        <strong>Gender:</strong> Male
+    </div>
+    <div class="info-item">
+        <strong>Address:</strong> Brgy. Pontod, Hilongos, Leyte, Philippines 
+     </div>
+    <div class="info-item">
+    <strong>Email Address:</strong> raijanpalmitos@gmail.com 
+    </div>
+    <div class="info-item">
+        <strong>Phone Number:</strong> 09618848617
+    </div>
+    <div class="info-item">
+        <strong>Nationality:</strong> Filipino
+    </div>
+    <div class="info-item">
+        <strong>Occupation:</strong> Student
+    </div>
+    <button     onclick="window.location.href = '../index.html';">Back to Portfolio</button>
+</div>
+
+<footer id=footer>
+    <p>&copy; 2024 RDP - All Rights Reserved</p>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var footer = document.getElementById('footer');
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            footer.style.bottom = '0';
+        } else {
+            footer.style.bottom = '-100px';
+        }
+    });
+</script>
+
+</body>
+</html>
+                                                             
+---------------------------Page 2----------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijan's Portfolio - About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c7b98e;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        @font-face {
+            font-family: 'lilitaone';
+            src: url('../assets/lilitaone.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'poppins';
+            src: url('../assets/poppins.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        header {
+            font-family: 'poppins', Arial, sans-serif;
+            background-color: #ecaf62;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: auto;
+        }
+        .container {
+            font-family: 'poppins', Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            font-size: 34px;
+            font-family: 'lilitaone', Arial, sans-serif;
+	    margin-top: auto;
+        }
+        .description {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #333;
+            color: #c7c7c7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .a {
+            color: #0018ff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .a:hover {
+            color: #fff12b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Raijan's Portfolio</h1>
+</header>
+
+<div class="container">
+    <h2>About Me</h2>
+    <div class="description">
+        <p>Hello! My name is Raijan D. Palmitos, and I am a 15-year-old student from Brgy. Pontod, Hilongos, Leyte, Philippines. I have a passion for learning and exploring new things, and I always strive to do my best in everything I undertake.</p>
+        <p>I am particularly interested in technology specifically aviation, drones and coding. <a class="a" onclick="window.location.href = 'page4.html';">view my interest here.</a> I enjoy working on various projects that challenge my skills and help me grow both personally and academically. In my spare time, I like to watch youtube videos, play games, and spend time with my family and friends.</p>
+        <p>My goal is to continue expanding my knowledge and skills, and to make a positive impact in my community and beyond. I am always eager to take on new challenges and opportunities that come my way.</p>
+        <p>Thank you for visiting my portfolio! I made this webpage with myself with the help of AI</p>
+    </div>
+    <button onclick="window.location.href = '../index.html';">Back to Portfolio</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 RDP - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+
+---------------------------Page 3----------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijan's Portfolio - Social Media</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c7b98e;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-card {
+            background-color: #262626;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-picture {
+            flex-shrink: 0;
+        }
+
+        .profile-picture img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .profile-details h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            margin: 5px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .description {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .button {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .button span {
+            margin-left: 10px;
+        }
+
+        .button i {
+            margin-right: 10px;
+        }
+
+        .button.blue {
+            background-color: #3498db;
+        }
+
+        .button.blue::after {
+            content: ' ';
+            background: #0077b5;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button.purple {
+            background-color: #9b59b6;
+        }
+
+        .button.purple::after {
+            content: ' ';
+            background: #23292f;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button.red {
+            background-color: #e74c3c;
+        }
+
+        .button.red::after {
+            content: ' ';
+            background: #ff0000;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button.gray {
+            background-color: #707070;
+        }
+
+        .button.gray::after {
+            content: ' ';
+            background: #404040;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .button.blue:hover {
+            background-color: #2980b9;
+        }
+
+        .button.purple:hover {
+            background-color: #8e44ad;
+        }
+
+        .button.red:hover {
+            background-color: #c0392b;
+        }
+
+        .button.gray:hover {
+            background-color: #505050;
+        }
+
+	.button.green {
+            background-color: #25D366;
+        }
+
+        .button.green::after {
+            content: ' ';
+            background: #00db00;
+            padding: 0 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+	.button.green:hover {
+            background-color: #00b300;
+        }
+	
+	.but {
+	    background-color: #333;
+            color: #c7c7c7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+	}
+	.but:hover {
+           background-color: #444;
+	   transform: scale(1.05);
+	}
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-picture">
+            <img src="../assets/pfp.jpg" alt="Raijan's Profile Picture">
+        </div>
+        <div class="profile-details">
+            <h2>Raijan D. Palmitos</h2>
+            <p class="subtitle">My Social Accounts</p>
+            <p class="description">Some of my social accounts are not added yet and will be added in the future updates.</p>
+            <div class="buttons">
+                <a href="https://www.facebook.com/raijan.palmitos.1/" class="button blue">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/jann_p18?igsh=YmVpZ3N6azJ5Mm4y" class="button red">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@raiji.18?_t=8mdoqovpOWl&_r=1" class="button gray">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Tiktok</span>
+                </a>
+                <a href="https://discord.com/users/1104244559795470420" class="button purple">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+		<a href="https://wa.me/qr/GTHNCFJ5LEH5E1 class="button green">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+		<button class="but" onclick="window.location.href = '../index.html';">Back to Portfolio</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+---------------------------Page 4----------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijan's Portfolio - Interests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c7b98e;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        html {
+            height: 100%;
+        }
+        @font-face {
+            font-family: 'lilitaone';
+            src: url('../assets/lilitaone.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'poppins';
+            src: url('../assets/poppins.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        header {
+            font-family: 'poppins', Arial, sans-serif;
+            background-color: #ecaf62;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        .container {
+            font-family: 'poppins', Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+        h2 {
+            font-size: 34px;
+            font-family: 'lilitaone', Arial, sans-serif;
+            margin-top: auto;
+        }
+        .interests {
+            margin-bottom: 20px;
+        }
+        .interest-box p {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .interest-box button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .interest-box button:hover {
+            background-color: #0056b3;
+        }
+        button {
+            background-color: #333;
+            color: #c7c7c7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .a {
+            color: #0018ff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .a:hover {
+            color: #fff12b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Raijan's Portfolio</h1>
+</header>
+
+<div class="container">
+    <h2>My Interests</h2>
+    <div class="interests">
+        <div class="interest-box">
+            <p>I like playing games. One of them is Mobile Legends.</p>
+            <p>You can add me so we can play. Copy my ID here (474782585) and launch the game. My highest rank in the game is Mythic with 18 stars. I barely playthis game that's why Mythic 18 stars is only my highest rank.</p>
+            <button onclick="copyToClipboard('474782585')">Play</button>
+            
+            <p>I also play COD:M. Copy my UID (7000953934000947201) or click the button below.</p>
+            <div class="portfolio-item project2">                
+                <p>I also play this game sometimes if someone will ask me to play because my phone will overheat and sometimes lag. But if you want to play with me just message me in one of my <a class="a" onclick="window.location.href = 'page3.html';">social accounts.</a></p>
+                <button class="button" onclick="copyTextAndOpenWebsite()">Copy UID and Play</button>
+                
+                <p>Another game I also play is Roblox. On this day I'm too addicted to Roblox. You can add me as a friend or follow my account via the button below</p>
+		<button onclick="window.location.href = 'https://www.roblox.com/users/2516657331/profile';">Play</button>
+		    
+		<p>I also play table tennis as my sport. If you want to play with me, just message me in any of my social accounts.</p>
+            </div>
+            <button onclick="window.location.href = '../index.html';">Back to Portfolio</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 RDP - All Rights Reserved</p>
+</footer>
+
+<script>
+function copyTextAndOpenWebsite() {
+    const textToCopy = "7000953934000947201";
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('UID copied, go and open the game.');
+        window.open('https://invite.codm.garena.com/system_en_SG.html');
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+</script>
+
+</body>
+</html>
