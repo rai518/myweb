@@ -61,7 +61,7 @@
             padding-bottom: 60px;
         }
         .portfolio-item {
-	    width: 400px;
+	           width: 400px;
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
@@ -69,10 +69,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: background-color 0.3s ease, transform 0.3s ease;
             position: relative;
-        }
-        .portfolio-item:hover {
-            background-color: #e0e0e0;
-            transform: scale(1.05);
         }
         .portfolio-link {
             color: #007bff;
@@ -109,42 +105,42 @@
            background-color: #444;
 	   transform: scale(1.05);
 	}
-
-@keyframes shake {
-   0%, 10%, 65%, 100% {
-    transform: rotate(0deg) scale(1.0);
-}
-30%, 40% {
-    transform: rotate(-1deg) scale(1.05);
-}
-
-35%, 45% {
-    transform: rotate(1deg) scale(1.05);
-}
-}
-.pulse {
-    animation: shake 2s ease-in-out infinite;
-}
-
+	.image {
+     flex-shrink: 0;
+	   margin: 20px, 0;
+	   transform: scale(1.05);
+     border-radius: 24px;
+     width: 100%;
+     max-width: 300px;
+     height: auto;
+     object-fit: cover;
+	    margin-left: 55px;
+	    margin-bottom: 3px;
+        }
+  .desc {
+      font-weight: bold;
+  }
+    
 </style>
 <body>
 <header>
     <h1>Raijan's Portfolio</h1>
 </header>
-    <h1>NGL</h1>
+    <h1>NGL-Reviews</h1>
 
 <div class="container">
     <div class="portfolio-item">
-        <h2>NGL (May 29-30)</h2>
-        <p>Send your anonymous message now! May 29-30</p>
-        <button onclick="openWebsite()" class="button pulse">Send</button>
-        <button onclick="window.location.href ='reviews.html';" class="button">View Reviews</button>
-    </div>
-    
-    
+        <h2>NGL - Reviews</h2>
+        <p class="desc">WAY TANA</p>
+        <img class="image" src="../../assets/ngl/1(29).png">
+        <p class="desc">Sa unsa mn?</p>
+        <img class="image" src="../../assets/ngl/2(29).png">
+	<p class="desc">Ambot aniiii</p>
+        <img class="image" src="../../assets/ngl/3(29).png">
+        </div>
 
 <div>
-<button class='but' onclick="window.location.href ='../misc.html';">Back to Portfolio</button>
+<button class='but' onclick="window.location.href ='ngl.html';">Back to Portfolio</button>
 </div>
 
 <script>
