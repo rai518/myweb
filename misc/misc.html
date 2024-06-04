@@ -18,13 +18,13 @@
         }
         @font-face {
             font-family: 'lilitaone';
-            src: url('../../assets/lilitaone.woff2') format('woff2');
+            src: url('../assets/lilitaone.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
         }
         @font-face {
             font-family: 'poppins';
-            src: url('../../assets/poppins.woff2') format('woff2');
+            src: url('../assets/poppins.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
         }
@@ -61,7 +61,7 @@
             padding-bottom: 60px;
         }
         .portfolio-item {
-	           width: 400px;
+	    width: 400px;
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
@@ -69,6 +69,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: background-color 0.3s ease, transform 0.3s ease;
             position: relative;
+        }
+        .portfolio-item:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
         }
         .portfolio-link {
             color: #007bff;
@@ -79,14 +83,13 @@
             background-color: #007bff;
             color: #fff;
             border: none;
-            padding: 10px 0px;
+            padding: 10px 20px;
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
             display: block;
             margin-top: 20px;
-            text-align: center;
         }
         .button:hover {
             background-color: #0056b3;
@@ -101,58 +104,50 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
 	}
-	.but:hover {
-           background-color: #444;
-	   transform: scale(1.05);
-	}
-	.image {
-     flex-shrink: 0;
-	   margin: 20px, 0;
-	   transform: scale(1.05);
-     border-radius: 24px;
-     width: 100%;
-     max-width: 300px;
-     height: auto;
-     object-fit: cover;
-	    margin-left: 55px;
-	    margin-bottom: 3px;
+	.button-d {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: not-allowed;
+            width: 100%;
+            display: block;
+            margin-top: 20px;
         }
-  .desc {
-      font-weight: bold;
-  }
-    
+        .button-d:hover {
+            background-color: #0056b3;
+        }
+	h3 {
+            font-size: 34px;
+            font-family: 'lilitaone', Arial, sans-serif;
+            margin-top: 10px;
+	    margin-left: 30px;
+        }
 </style>
 <body>
 <header>
     <h1>Raijan's Portfolio</h1>
 </header>
-    <h1>NGL-Reviews</h1>
+    <h3>MISC</h3>
 
 <div class="container">
     <div class="portfolio-item">
-        <h2>NGL - Reviews</h2>
-        <p class="desc">WAY TANA</p>
-        <img class="image" src="../../assets/ngl/1(29).png">
-        <p class="desc">Sa unsa mn?</p>
-        <img class="image" src="../../assets/ngl/2(29).png">
-       	<p class="desc">Ambot aniiii</p>
-        <img class="image" src="../../assets/ngl/3(29).png">
-        <p class="desc">Lamatssss</p>
-        <img class="image" src="../../assets/ngl/4(29).png">
-	<p class="desc">ha</p>
-        <img class="image" src="../../assets/ngl/5(31).png">
-        </div>
+        <h2>Donate </h2>
+        <p>Donate via Gcash or Maya</p>
+        <button class="button" onclick="window.location.href = 'misc/donation.html';">View</button>
+    </div>
 
+    <div class="portfolio-item">
+        <h2>NGL (Available)</h2>
+        <p>Send me an annonymous message in NGL!
+        This is seasonal.</p>
+        <button class='button' onclick="window.location.href = 'ngl/ngl.html';">View</button>
+    </div>
 <div>
-<button class='but' onclick="window.location.href ='ngl.html';">Back to Portfolio</button>
+<button class='but' onclick="window.location.href ='../index.html';">Back to Portfolio</button>
 </div>
 
-<script>
-    
-    function openWebsite() {
-            window.location.href = 'https://ngl.link/jann.p18';
-        }
-        
-</script>
 </body>
 </html>
